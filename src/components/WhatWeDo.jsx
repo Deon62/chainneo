@@ -34,9 +34,13 @@ const WhatWeDo = () => {
   return (
     <section className="bg-white py-20 px-6">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-text text-center mb-16">
+        <h2 className="text-4xl md:text-5xl font-bold text-text text-center mb-8">
           What We Do
         </h2>
+        
+        <p className="text-center text-text/70 text-lg max-w-3xl mx-auto mb-16 leading-relaxed">
+          We empower the next generation through comprehensive Web3 education, hands-on experience, and meaningful connections that transform curiosity into capability.
+        </p>
         
         <div className="grid md:grid-cols-3 gap-8">
           {cards.map((card, index) => {
@@ -45,20 +49,20 @@ const WhatWeDo = () => {
               <div 
                 key={index}
                 ref={ref}
-                className={`bg-background p-8 rounded-2xl hover:shadow-xl transition-all duration-700 transform hover:-translate-y-2 border border-brand/10 ${
+                className={`bg-text text-white p-8 rounded-2xl hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-2 hover:scale-105 ${
                   isVisible 
-                    ? 'opacity-100 translate-y-0' 
-                    : 'opacity-0 translate-y-10'
+                    ? 'opacity-100 translate-y-0 scale-100' 
+                    : 'opacity-0 translate-y-20 scale-95'
                 }`}
-                style={{ transitionDelay: `${index * 150}ms` }}
+                style={{ transitionDelay: `${index * 200}ms` }}
               >
-                <div className="text-brand mb-6">
+                <div className="text-white mb-6">
                   {card.icon}
                 </div>
-                <h3 className="text-2xl font-bold text-text mb-4">
+                <h3 className="text-2xl font-bold text-white mb-4">
                   {card.title}
                 </h3>
-                <p className="text-text/70 text-lg leading-relaxed">
+                <p className="text-white/80 text-lg leading-relaxed">
                   {card.description}
                 </p>
               </div>

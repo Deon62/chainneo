@@ -1,7 +1,7 @@
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import WhatWeDo from './components/WhatWeDo'
-import WhoItsFor from './components/WhoItsFor'
+import WhyWeb3 from './components/WhyWeb3'
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
       <Navbar />
       <Hero />
       <WhatWeDo />
-      <WhoItsFor />
+      <WhyWeb3 />
     </div>
   )
 }
