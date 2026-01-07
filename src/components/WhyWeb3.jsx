@@ -19,7 +19,7 @@ const WhyWeb3 = () => {
           }`}
         >
           <p className="text-text/80 text-lg md:text-xl leading-relaxed text-center">
-            Web3 technologies — blockchain, decentralized finance, tokenization, and digital identity — offer Africa a practical path to bypass legacy systems in finance, governance, and innovation. But technology alone does not create impact. Without clear, accessible education, these tools remain misunderstood, misused, or inaccessible to the very communities they can benefit most. Chain Neo exists to bridge this gap by translating Web3 from theory into real-world skills, enabling young people to understand, build, and apply these technologies to create sustainable economic opportunities.
+            Web3 technologies blockchain, DeFi, and digital identity can help Africa bypass traditional barriers in finance and innovation. Chain Neo makes these tools simple and accessible, empowering youth to learn, build, and create real economic opportunities.
           </p>
         </div>
       </div>
