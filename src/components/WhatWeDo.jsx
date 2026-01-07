@@ -1,3 +1,5 @@
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
+
 const WhatWeDo = () => {
   const cards = [
     {
@@ -37,22 +39,31 @@ const WhatWeDo = () => {
         </h2>
         
         <div className="grid md:grid-cols-3 gap-8">
-          {cards.map((card, index) => (
-            <div 
-              key={index}
-              className="bg-background p-8 rounded-2xl hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-brand/10"
-            >
-              <div className="text-brand mb-6">
-                {card.icon}
+          {cards.map((card, index) => {
+            const [ref, isVisible] = useScrollAnimation();
+            return (
+              <div 
+                key={index}
+                ref={ref}
+                className={`bg-background p-8 rounded-2xl hover:shadow-xl transition-all duration-700 transform hover:-translate-y-2 border border-brand/10 ${
+                  isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+                style={{ transitionDelay: `${index * 150}ms` }}
+              >
+                <div className="text-brand mb-6">
+                  {card.icon}
+                </div>
+                <h3 className="text-2xl font-bold text-text mb-4">
+                  {card.title}
+                </h3>
+                <p className="text-text/70 text-lg leading-relaxed">
+                  {card.description}
+                </p>
               </div>
-              <h3 className="text-2xl font-bold text-text mb-4">
-                {card.title}
-              </h3>
-              <p className="text-text/70 text-lg leading-relaxed">
-                {card.description}
-              </p>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

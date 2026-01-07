@@ -1,3 +1,5 @@
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
+
 const WhoItsFor = () => {
   const audience = [
     {
@@ -36,19 +38,28 @@ const WhoItsFor = () => {
         </h2>
         
         <div className="grid md:grid-cols-3 gap-12">
-          {audience.map((item, index) => (
-            <div 
-              key={index}
-              className="flex flex-col items-center text-center group"
-            >
-              <div className="text-brand mb-6 transform group-hover:scale-110 transition-transform duration-300">
-                {item.icon}
+          {audience.map((item, index) => {
+            const [ref, isVisible] = useScrollAnimation();
+            return (
+              <div 
+                key={index}
+                ref={ref}
+                className={`flex flex-col items-center text-center group transition-all duration-700 transform ${
+                  isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+                style={{ transitionDelay: `${index * 150}ms` }}
+              >
+                <div className="text-brand mb-6 transform group-hover:scale-110 transition-transform duration-300">
+                  {item.icon}
+                </div>
+                <h3 className="text-xl font-bold text-text">
+                  {item.label}
+                </h3>
               </div>
-              <h3 className="text-xl font-bold text-text">
-                {item.label}
-              </h3>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
