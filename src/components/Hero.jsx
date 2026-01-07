@@ -1,11 +1,11 @@
 const Hero = () => {
   return (
     <section className="grid-background-hero min-h-screen flex items-center justify-center px-6">
-      <div className="max-w-4xl mx-auto text-center bg-white/60 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-xl">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-text mb-6 leading-tight drop-shadow-sm">
+      <div className="max-w-4xl mx-auto text-center bg-white/90 backdrop-blur-md rounded-3xl p-8 md:p-12 shadow-2xl border border-brand/10">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-text mb-6 leading-tight">
           Building the Next Generation of Web3 Builders
         </h1>
-        <p className="text-xl md:text-2xl text-text/80 mb-12 font-semibold">
+        <p className="text-xl md:text-2xl text-text mb-12 font-semibold">
           Learn. Build. Connect.
         </p>
         
