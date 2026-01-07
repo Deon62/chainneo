@@ -13,3 +13,31 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.grid-background {
+  background-color: #F6F8FC;
+  background-image: 
+    linear-gradient(#E3E8F2 1px, transparent 1px),
+    linear-gradient(90deg, #E3E8F2 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.grid-background-hero {
+  background-color: #F6F8FC;
+  background-image: 
+    radial-gradient(circle at center, transparent 0%, rgba(246, 248, 252, 0.8) 70%, #F6F8FC 100%),
+    linear-gradient(#E3E8F2 1px, transparent 1px),
+    linear-gradient(90deg, #E3E8F2 1px, transparent 1px);
+  background-size: 100% 100%, 32px 32px, 32px 32px;
+}
+
+@media (max-width: 768px) {
+  .grid-background,
+  .grid-background-hero {
+    background-image: 
+      linear-gradient(#E3E8F2 1px, transparent 1px),
+      linear-gradient(90deg, #E3E8F2 1px, transparent 1px);
+    background-size: 32px 32px;
+    opacity: 0.5;
+  }
+}

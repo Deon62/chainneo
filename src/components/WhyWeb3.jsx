@@ -4,7 +4,7 @@ const WhyWeb3 = () => {
   const [ref, isVisible] = useScrollAnimation();
 
   return (
-    <section className="bg-background py-20 px-6">
+    <section className="grid-background py-20 px-6">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold text-text text-center mb-12">
           Why Web3?

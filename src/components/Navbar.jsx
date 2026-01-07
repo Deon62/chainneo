@@ -13,7 +13,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-text/95 backdrop-blur-md border-b border-white/10">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-text/10 shadow-sm">
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-end">
             <div className="hidden md:flex items-center space-x-8">
@@ -21,7 +21,7 @@ const Navbar = () => {
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-white font-semibold hover:text-white/70 transition-colors duration-300 text-lg"
+                  className="text-text font-semibold hover:text-brand transition-colors duration-300 text-lg"
                 >
                   {link.name}
                 </a>
@@ -30,7 +30,7 @@ const Navbar = () => {
 
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden text-white focus:outline-none ml-auto"
+              className="md:hidden text-text focus:outline-none ml-auto"
               aria-label="Toggle menu"
             >
               <svg
