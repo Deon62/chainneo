@@ -1,5 +1,6 @@
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
+import AboutUs from './components/AboutUs'
 import WhatWeDo from './components/WhatWeDo'
 import WhyWeb3 from './components/WhyWeb3'
 
@@ -8,6 +9,7 @@ function App() {
     <div className="min-h-screen bg-background">
       <Navbar />
       <Hero />
+      <AboutUs />
       <WhatWeDo />
       <WhyWeb3 />
     </div>
